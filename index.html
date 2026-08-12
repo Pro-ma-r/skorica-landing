@@ -1,40 +1,164 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Skorica</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Skorica – aplikacija za vođenje liga i turnira." />
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background: #0f172a;
-      color: #e5e7eb;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      opacity: 0.85;
-      margin: 0.3rem 0;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Skorica – upravljanje sportskim natjecanjima</title>
+  <meta name="description" content="Skorica je platforma za organizaciju liga i turnira – od ekipa i rasporeda do rezultata, tablica i javne objave natjecanja.">
+  <meta name="theme-color" content="#1f2026">
+  <link rel="canonical" href="https://skorica.com/">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <main>
-    <h1>Skorica</h1>
-    <p>Aplikacija za vođenje liga i turnira</p>
-    <p><em>Uskoro dostupno.</em></p>
-    <p style="margin-top:1rem;font-size:0.9rem;">
-      Kontakt: info@skorica.com
-    </p>
+  <main class="sk-landing">
+    <header class="nav-wrap">
+      <nav class="nav shell" aria-label="Glavna navigacija">
+        <a class="logo" href="/" aria-label="Skorica početna"><img src="/assets/skorica-logo.svg" alt="Skorica"></a>
+        <div class="nav-links">
+          <a href="#mogucnosti">Mogućnosti</a>
+          <a href="#kako-radi">Kako radi</a>
+          <a href="#cijene">Cijene</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="nav-actions">
+          <a class="login-link" href="https://app.skorica.com/login">Prijava</a>
+          <a class="button button-small" href="#kontakt">Zatraži demo</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <span class="kicker">Platforma za sportska natjecanja</span>
+          <h1>Vodite sportska natjecanja jednostavno, profesionalno i na jednom mjestu.</h1>
+          <p class="lead">Skorica je platforma za organizaciju liga i turnira - od ekipa i rasporeda do rezultata, tablica i javne objave natjecanja.</p>
+          <div class="hero-actions">
+            <a class="button" href="#kontakt">Zatraži demo</a>
+            <a class="button button-secondary" href="#mogucnosti">Pogledaj mogućnosti</a>
+          </div>
+          <div class="hero-points" aria-label="Glavne mogućnosti">
+            <span>Više članova organizacije</span>
+            <span>Javna stranica natjecanja</span>
+            <span>Lige i turniri</span>
+          </div>
+        </div>
+
+        <div class="dashboard" aria-label="Primjer Skorica nadzorne ploče">
+          <div class="dashboard-top">
+            <div><span class="dashboard-label">Natjecanje</span><strong>Ljetna liga 2026</strong></div>
+            <span class="status">Aktivno</span>
+          </div>
+          <div class="stats">
+            <article><span>Ekipe</span><strong>12</strong></article>
+            <article><span>Utakmice</span><strong>66</strong></article>
+            <article><span>Odigrano</span><strong>42</strong></article>
+          </div>
+          <div class="dashboard-body">
+            <div class="dashboard-panel">
+              <div class="dashboard-heading"><strong>Sljedeće utakmice</strong><span>Tijek natjecanja</span></div>
+              <div class="match-row"><div><b>NK Sjever</b><span>18:00</span></div><i>–</i><div><b>NK Park</b><span>Stadion Centar</span></div></div>
+              <div class="match-row"><div><b>ŠD Mladost</b><span>20:00</span></div><i>–</i><div><b>SK Jadran</b><span>Igralište Zapad</span></div></div>
+            </div>
+            <div class="dashboard-panel mini-table">
+              <div class="dashboard-heading"><strong>Tablica</strong><span>Top 4</span></div>
+              <ol><li><b>NK Sjever</b><span>24</span></li><li><b>ŠD Mladost</b><span>21</span></li><li><b>SK Jadran</b><span>19</span></li><li><b>NK Park</b><span>17</span></li></ol>
+            </div>
+          </div>
+          <div class="progress"><div class="progress-head"><span>Napredak natjecanja</span><b>64%</b></div><div class="progress-track"><span></span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mogucnosti">
+      <div class="shell">
+        <div class="section-heading">
+          <span class="kicker">Mogućnosti</span>
+          <h2>Manje tablica i poruka. Više kontrole nad natjecanjem.</h2>
+          <p>Skorica povezuje operativni dio organizacije i javni prikaz u jedno jasno iskustvo.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card"><span>01</span><h3>Sve natjecanje na jednom mjestu</h3><p>Ekipe, raspored, rezultati, tablica i objava povezani su u jedan pregledan radni prostor.</p></article>
+          <article class="feature-card"><span>02</span><h3>Više ljudi, jasne ovlasti</h3><p>Organizacija može imati više članova uz kontrolirane uloge i pristupe natjecanjima.</p></article>
+          <article class="feature-card"><span>03</span><h3>Javni prikaz bez dodatnog posla</h3><p>Objavite natjecanje i podijelite jednu adresu na kojoj publika prati raspored, rezultate i poredak.</p></article>
+          <article class="feature-card"><span>04</span><h3>Lige i turniri</h3><p>Jedinstvena platforma za ligaška natjecanja i turnirske formate, od grupa do završnice.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="kako-radi">
+      <div class="shell">
+        <div class="section-heading center"><span class="kicker">Kako radi</span><h2>Od novog natjecanja do javne objave u jasnim koracima.</h2></div>
+        <div class="steps">
+          <article><span>1</span><h3>Postavite natjecanje</h3><p>Odaberite vrstu, sezonu i pravila prema kojima se natjecanje vodi.</p></article>
+          <article><span>2</span><h3>Dodajte ekipe i raspored</h3><p>Unesite sudionike, generirajte ili uredite raspored i dodijelite termine i lokacije.</p></article>
+          <article><span>3</span><h3>Vodite rezultate</h3><p>Unosite službene rezultate i pratite poredak kroz cijeli tijek natjecanja.</p></article>
+          <article><span>4</span><h3>Objavite</h3><p>Jednim javnim linkom podijelite raspored, rezultate i tablicu s publikom.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pregled">
+      <div class="shell">
+        <div class="section-heading"><span class="kicker">Pregled proizvoda</span><h2>Informacije koje trebate, tamo gdje ih očekujete.</h2><p>Administratorski i javni prikaz dijele isti miran, čitljiv Skorica identitet.</p></div>
+        <div class="preview-grid">
+          <article class="preview-card"><div class="preview-visual"><div class="preview-header"><span>Pregled natjecanja</span><i></i></div><div class="preview-metrics"><i></i><i></i><i></i></div><div class="preview-lines"><span></span><span></span><span></span></div></div><div class="copy"><h3>Pregled natjecanja</h3><p>Sažetak ekipa, utakmica, rezultata i tijeka natjecanja na jednom zaslonu.</p></div></article>
+          <article class="preview-card"><div class="preview-visual"><div class="preview-header"><span>Tablica i rezultati</span><i></i></div><div class="preview-table"><span></span><span></span><span></span><span></span></div></div><div class="copy"><h3>Tablica i rezultati</h3><p>Aktualni poredak, službeni rezultati i forma posljednjih utakmica bez ručnog računanja.</p></div></article>
+          <article class="preview-card"><div class="preview-visual"><div class="preview-header"><span>Turnir</span><i></i></div><div class="preview-bracket"><span></span><span></span><span></span><span></span><b></b></div></div><div class="copy"><h3>Turnirske grupe i završnica</h3><p>Grupna faza i završnica u istom natjecanju, s jasnim prijelazom prema nokaut fazi.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section">
+      <div class="shell audience">
+        <div><span class="kicker kicker-on-dark">Za koga je Skorica</span><h2>Za organizatore koji žele profesionalan sustav bez nepotrebne složenosti.</h2><p>Od lokalnog turnira do natjecanja koje vodi više ljudi — isti sustav prati organizaciju od početka do kraja.</p></div>
+        <div class="audience-list"><span>Sportski savezi i udruge</span><span>Klubovi i sportske škole</span><span>Organizatori lokalnih liga</span><span>Organizatori turnira</span></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell why-grid">
+        <div class="section-heading"><span class="kicker">Zašto Skorica</span><h2>Jedan izvor istine za cijelo natjecanje.</h2></div>
+        <div class="why-list">
+          <article><b>01</b><div><h3>Pregledno</h3><p>Operativni dio je organiziran po stvarnim zadacima: ekipe, raspored, rezultati, tablica, postavke i objava.</p></div></article>
+          <article><b>02</b><div><h3>Kontrolirano</h3><p>Uloge, statusi natjecanja i zaključavanja čuvaju važne akcije od slučajnih promjena.</p></div></article>
+          <article><b>03</b><div><h3>Javno kada vi odlučite</h3><p>Natjecanje može ostati privatno dok nije spremno, a zatim dobiva vlastiti javni prikaz.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="cijene">
+      <div class="shell"><div class="pricing"><div><span class="kicker">Cijene</span><h2>Plan koji prati način na koji organizirate natjecanja.</h2><p>Paketi i komercijalni uvjeti bit će jasno definirani prije javnog lansiranja. Za demo i rani pristup javite nam se.</p></div><a class="button" href="#kontakt">Zatraži demo</a></div></div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="shell faq-grid">
+        <div class="section-heading"><span class="kicker">FAQ</span><h2>Najčešća pitanja.</h2></div>
+        <div class="faq-list">
+          <details><summary>Je li Skorica samo za nogomet?<span>+</span></summary><p>Ne. Platforma je zamišljena za sportska natjecanja općenito, uz pravila i prikaze koji se prilagođavaju vrsti natjecanja.</p></details>
+          <details><summary>Mogu li natjecanje voditi više osoba?<span>+</span></summary><p>Da. Skorica podržava organizacije s više članova i različitim razinama pristupa.</p></details>
+          <details><summary>Mogu li gledatelji pratiti natjecanje bez prijave?<span>+</span></summary><p>Da. Organizator može objaviti natjecanje i podijeliti javnu stranicu s rasporedom, rezultatima i tablicom.</p></details>
+          <details><summary>Podržava li Skorica turnire?<span>+</span></summary><p>Da. Turnirski dio predviđen je za grupnu fazu, nokaut završnicu i kombinirane formate.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final" id="kontakt">
+      <div class="shell final-inner">
+        <span class="kicker kicker-on-dark">Skorica</span>
+        <h2>Spremni za jednostavnije vođenje natjecanja?</h2>
+        <p>Otvorite račun za pristup platformi. Kontakt za demonstraciju sustava objavit ćemo prije javnog lansiranja.</p>
+        <div class="final-actions"><a class="button" href="https://app.skorica.com/register">Registracija</a><a class="button button-dark-secondary" href="https://app.skorica.com/login">Prijava</a></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="shell footer-inner">
+        <a class="footer-brand" href="/">Skorica</a>
+        <div class="footer-links"><a href="#mogucnosti">Mogućnosti</a><a href="#cijene">Cijene</a><a href="#faq">FAQ</a><a href="#kontakt">Kontakt</a><a href="https://app.skorica.com/login">Prijava</a></div>
+        <p>© 2026 Skorica. Sva prava pridržana.<br>Skoricu je izradio Promar · <a href="https://www.promar.hr" target="_blank" rel="noopener noreferrer">www.promar.hr</a></p>
+      </div>
+    </footer>
   </main>
 </body>
 </html>
