@@ -8,3 +8,4 @@ Javna marketinška stranica za Skoricu.
 - registracija: `https://app.skorica.com/register`
 
 Landing je namjerno odvojen od repozitorija `skorica-app`.
+Produkcijski deployment prati granu `main`.
