@@ -1,0 +1,20 @@
+name: Landing checks
+on: [pull_request]
+permissions:
+  contents: read
+jobs:
+  browser:
+    name: Landing browser checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: node --check information.js
+      - run: npm run build
+      - run: npm test

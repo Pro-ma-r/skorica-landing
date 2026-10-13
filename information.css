@@ -1,0 +1,131 @@
+.sk-information-dialog,.sk-information-page,.sk-information-links{--sk-border:#e7e8ec;--sk-radius-lg:16px;--sk-radius-sm:8px;--sk-surface:#fff;--sk-text:#1f2026;--sk-orange:#ff6a2a;--sk-shadow:0 8px 24px rgba(31,32,38,.06)}
+.sk-information-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 20px;
+  margin-top: 24px;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.sk-information-links a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sk-information-page {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+  box-sizing: border-box;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.sk-information-page h1 {
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.2;
+  margin: 32px 0 24px;
+}
+
+.sk-information-page h2 {
+  font-size: 1.25rem;
+  margin: 28px 0 12px;
+}
+
+.sk-information-page p {
+  margin: 12px 0;
+}
+.sk-information-page a {
+  color: var(--sk-text);
+  text-decoration: underline;
+}
+.sk-information-page img {
+  max-width: 100%;
+  height: auto;
+}
+
+.sk-copy-restricted {
+  user-select: none;
+  -webkit-user-select: none;
+}
+.sk-information-dialog {
+  position: fixed;
+  inset: 16px 0 auto;
+  width: min(800px, calc(100% - 32px));
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  margin: 0 auto;
+  border: 1px solid var(--sk-border);
+  border-radius: var(--sk-radius-lg);
+  background: var(--sk-surface);
+  color: var(--sk-text);
+  box-shadow: var(--sk-shadow);
+  overflow-wrap: anywhere;
+}
+.sk-information-dialog::backdrop {
+  background: rgba(31, 32, 38, 0.45);
+  backdrop-filter: blur(6px);
+}
+.sk-information-dialog-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--sk-surface);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border-bottom: 1px solid var(--sk-border);
+}
+.sk-information-dialog-header h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.sk-information-dialog-header button {
+  flex-shrink: 0;
+  padding: 10px;
+  border: 1px solid var(--sk-border);
+  border-radius: var(--sk-radius-sm);
+  background: var(--sk-surface);
+  color: var(--sk-text);
+  cursor: pointer;
+}
+.sk-information-dialog-content {
+  padding: 8px 24px 24px;
+  line-height: 1.7;
+}
+.sk-information-dialog-content h2 {
+  font-size: 1.15rem;
+  margin: 24px 0 12px;
+}
+.sk-information-dialog-content p {
+  margin: 12px 0;
+}
+.sk-information-dialog-content a {
+  color: inherit;
+  text-decoration: underline;
+}
+.sk-information-dialog a:focus-visible,
+.sk-information-dialog button:focus-visible,
+.sk-information-links a:focus-visible {
+  outline: 2px solid var(--sk-orange);
+  outline-offset: 4px;
+}
+@media (max-width: 420px) {
+  .sk-information-dialog-header {
+    align-items: flex-start;
+    padding: 16px;
+  }
+  .sk-information-dialog-content {
+    padding: 4px 16px 20px;
+  }
+}
+
+.footer-links{flex-wrap:wrap;gap:12px 20px}.footer-inner{grid-template-columns:1fr;justify-items:center;padding:28px 0;text-align:center}.provider-contact{margin-top:16px!important}.provider-contact a{text-decoration:underline!important}
