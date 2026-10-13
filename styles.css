@@ -126,7 +126,8 @@ details p { margin: 0 0 25px; color: var(--muted); font-size: 14px; line-height:
 .provider-contact { margin-bottom: 0; }
 .provider-contact a { text-decoration: underline; text-underline-offset: 5px; color: #fff; }
 .final-actions { display: flex; flex-direction: column; gap: 12px; }
-.final-actions .button { justify-content: space-between; }
+.final-actions .button { position: relative; justify-content: center; min-height: 60px; padding-inline: 48px; font-size: 18px; }
+.final-actions .button span { position: absolute; right: 22px; font-size: 22px; }
 .final-actions>span { margin-top: 6px; color: #c0c2c8; font-size: 11px; text-align: center; }
 .button-dark-secondary { background: transparent; border-color: #62646d; color: #fff!important; justify-content: center!important; }
 .button-dark-secondary:hover { background: #34353c; }
