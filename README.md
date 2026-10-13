@@ -18,11 +18,7 @@ zatvaranje vraća fokus. Kopiranje je ograničeno standardnim browser
 događajima i CSS-om, a izvorni sadržaj i snimke nisu zaštićeni od pristupa.
 Četiri HTML stranice ostaju dostupne i bez JavaScripta.
 
-Tekstovi su statički preuzeti iz kanonskih komponenti `skorica-app`; izvorni
-commit je u `docs/information-source.json`. Za osvježenje, iz ove mape:
-`node scripts/sync-information.mjs /apsolutni/put/skorica-app PUNI_COMMIT_SHA`.
-Generator koristi postojeće development ovisnosti aplikacije. Landing nema
-nove runtime ovisnosti niti poveznicu koja učitava osobne podatke.
+Kanonski tekstovi nalaze se u četiri samostalna HTML dokumenta ovog repozitorija. Nakon njihove izmjene pokrenite `node scripts/sync-information.mjs` za usklađenje modalnih kopija u index.html. Povijest izvornog preuzimanja ostaje u docs/information-source.json. Generator više ne ovisi o skorica-app repozitoriju ni njegovim bibliotekama. Landing nema nove runtime ovisnosti.
 
 `npm ci`, `npx playwright install chromium`, `npm test` provjeravaju modal,
 kontakt, povratak na početak i širinu 320px na desktopu i mobitelu.
