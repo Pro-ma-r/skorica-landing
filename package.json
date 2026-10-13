@@ -1,0 +1,7 @@
+{
+  "name": "skorica-landing",
+  "private": true,
+  "engines": { "node": "22.x" },
+  "scripts": { "build": "node scripts/build.mjs", "test": "playwright test" },
+  "devDependencies": { "@playwright/test": "1.62.1" }
+}

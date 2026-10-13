@@ -1,0 +1,29 @@
+{
+  "repository": "Pro-ma-r/skorica-app",
+  "revision": "07ea3de5f6cd669f87c0dcd7881cfb6147949a04",
+  "generatedAt": "2026-10-13",
+  "provider": {
+    "name": "Promar, agencija za promidžbu",
+    "address": "Kurilovečka 152, Velika Gorica",
+    "taxId": "11734137997",
+    "email": "info@promar.hr"
+  },
+  "pages": [
+    {
+      "page": "support",
+      "title": "Kontakt i podrška"
+    },
+    {
+      "page": "usage",
+      "title": "Pristup i korištenje"
+    },
+    {
+      "page": "privacy",
+      "title": "Privatnost i zaštita podataka"
+    },
+    {
+      "page": "cookies",
+      "title": "Kolačići"
+    }
+  ]
+}
