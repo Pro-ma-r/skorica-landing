@@ -22,3 +22,13 @@ Kanonski tekstovi nalaze se u četiri samostalna HTML dokumenta ovog repozitorij
 
 `npm ci`, `npx playwright install chromium`, `npm test` provjeravaju modal,
 kontakt, povratak na početak i širinu 320px na desktopu i mobitelu.
+
+Sportski vizuali koriste lokalne WebP datoteke u širinama 1440px i 800px.
+Uvodna slika ima prioritet učitavanja, a slika organizatora učitava se kada
+joj se posjetitelj približi. Opis izvora i točne upute za generiranje nalaze
+se u docs/visual-assets.md. Fotografije su AI ilustracije, a prikaz lige
+koristi izmišljene primjere, bez podataka klijenata. Nema vanjskih fontova,
+udaljenih slika, dodatnih skripti za praćenje ni runtime ovisnosti.
+
+Testovi dodatno provjeravaju učitavanje svih slikovnih varijanti, veličinu
+datoteka, prikaz od 320px do 1440px, navigaciju tipkovnicom i ručni pristup.
