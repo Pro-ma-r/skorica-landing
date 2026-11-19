@@ -1,5 +1,36 @@
 {
   "framework": null,
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "^/((?!(?:account|admin|api|assets|auth|backup-information|brand|change-password|cookies|demo|favicon|fonts|forgot-password|icons|index|information|install|invite|liga|login|manifest|natjecanje|privacy|public|pwa|register|reset-password|robots|sitemap|styles|support|sw|turnir|usage|version|www)(?:/|$))(?=[a-z0-9-]{2,80}/)[a-z0-9]+(?:-[a-z0-9]+)*)/((?=[a-z0-9-]{1,80}/?$)[a-z0-9]+(?:-[a-z0-9]+)*)/?$",
+      "status": 307,
+      "headers": {
+        "Location": "https://app.skorica.com/$1/$2",
+        "Cache-Control": "no-store"
+      },
+      "caseSensitive": true,
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    },
+    {
+      "src": "^/((?!(?:account|admin|api|assets|auth|backup-information|brand|change-password|cookies|demo|favicon|fonts|forgot-password|icons|index|information|install|invite|liga|login|manifest|natjecanje|privacy|public|pwa|register|reset-password|robots|sitemap|styles|support|sw|turnir|usage|version|www)(?:/|$))(?=[a-z0-9-]{2,80}/?$)[a-z0-9]+(?:-[a-z0-9]+)*)/?$",
+      "status": 307,
+      "headers": {
+        "Location": "https://app.skorica.com/$1",
+        "Cache-Control": "no-store"
+      },
+      "caseSensitive": true,
+      "methods": [
+        "GET",
+        "HEAD"
+      ]
+    }
+  ]
 }
