@@ -41,3 +41,13 @@ test('keyboard visitors can skip navigation and read how access is activated', a
   await expect(page.locator('details[open]')).toContainText('Nakon osobnog dogovora aktiviramo organizaciju');
   await expect(page.locator('#kontakt a[href="mailto:info@promar.hr"]').first()).toBeVisible();
 });
+
+
+test('anonymous demo CTAs share the canonical entry and preserve presentation/navigation', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('.nav-actions').getByRole('link', { name: 'Isprobaj demo', exact: true })).toHaveAttribute('href', 'https://skorica.com/demo');
+  await expect(page.locator('.hero-actions').getByRole('link', { name: 'Isprobaj Skoricu', exact: true })).toHaveAttribute('href', 'https://skorica.com/demo');
+  await expect(page.locator('.hero-actions').getByRole('link', { name: 'Dogovori predstavljanje', exact: true })).toHaveAttribute('href', '#kontakt');
+  await expect(page.getByRole('link', { name: 'Upoznaj Skoricu', exact: true })).toHaveAttribute('href', '#pregled');
+  await expect(page.getByText('Besplatno, bez registracije i obveze.', { exact: true })).toBeVisible();
+});
