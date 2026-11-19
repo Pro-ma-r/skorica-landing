@@ -30,7 +30,7 @@ test('stable public identities and editions retain their app path', () => {
 });
 
 test('real marketing files and application namespaces are preserved', () => {
-  for (const path of ['/','/index.html','/styles.css','/support.html','/assets/photo.webp','/demo','/account','/api/health','/login','/privacy','/cookies','/liga','/natjecanje','/turnir','/pwa','/manifest','/version'])
+  for (const path of ['/','/index.html','/styles.css','/support.html','/assets/photo.webp','/account','/api/health','/login','/privacy','/cookies','/liga','/natjecanje','/turnir','/pwa','/manifest','/version'])
     assert.equal(destination(path), null, path);
   assert.equal(destination('/future-page', 'GET', new Set(['/future-page'])), null);
 });
@@ -39,4 +39,14 @@ test('malformed or deep aliases never become redirects', () => {
   for (const path of ['/a',`/${'a'.repeat(81)}`,`/ab/${'a'.repeat(81)}`,'/panadić','/Panadic','/-panadic','/panadic-','/panadic--liga','/panadic/2026/extra','//external.example','/panadic/%2fadmin','/panadic/../admin'])
     assert.equal(destination(path), null, path);
   assert.equal(destination(`/${'a'.repeat(80)}`), `https://app.skorica.com/${'a'.repeat(80)}`);
+});
+
+
+test('demo entry stays explicit and cannot swallow protected or nested routes', () => {
+  for (const path of ['/demo','/demo/']) {
+    assert.equal(destination(path),'https://app.skorica.com/demo');
+    assert.equal(destination(path,'HEAD'),'https://app.skorica.com/demo');
+    assert.equal(destination(path,'POST'),null);
+  }
+  for (const path of ['/Demo','/demo/private','/demo/2027-2028']) assert.equal(destination(path),null);
 });
