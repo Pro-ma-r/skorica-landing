@@ -16,5 +16,6 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: node --check information.js
+      - run: npm run test:routes
       - run: npm run build
       - run: npm test
